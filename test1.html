@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+      body
+      {
+        align-items: center;
+        
+      }
+      section
+      {
+          background-color: rgb(222, 184, 135);
+          color: rgb(19, 19, 19);
+          width: 600px;
+          height: 500px;
+          
+
+      }
+  </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Signup Form</title>
+    <script src="new.js"></script>
+
+  </head>
+  <body>
+    <center>
+    <section class="wrapper">
+      <div class="form signup">
+        <header>SELF CHECK-IN</header><br> </br>
+        <form action="connect1.php" method="post">
+            <span class="details">First Name:</span>
+            <input type="text" placeholder="First Name" id="First" required name="First Name"/><br></br>
+            <span class="details">Last Name:</span>
+            <input type="text" placeholder="Last Name" id="Last" required name="Last Name"/>
+            <br></br>
+        <span class="details">Aadhar Number:</span>
+          <input type="text" placeholder="Aadhar Number" id="Aadhar" required  maxlength="12"
+          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+          <br></br>
+          <span class="details">Mobile Number:</span>
+          <select>
+           
+          <option>+91</option>
+          </select>
+          <input type="text" placeholder="Mobile Number" id="Mobile" input type="text"
+          pattern="[0-9]+" maxlength="10"
+          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+
+    <br></br>
+          <span class="details">OTP:</span>
+          <input type="text" placeholder="OTP" id="OTP" required  maxlength="06"
+          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+          <br></br>
+
+          <input type="submit" value="Login" onclick="saveFile()"/>
+        </form>
+      </div>
+</center>
+</body>
+</html>
